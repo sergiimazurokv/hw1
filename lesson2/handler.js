@@ -10,7 +10,7 @@ module.exports = (req, res) => {
 
   if ('/index.html' === urlParsed.pathname) {
     ++count;
-    res.setHeader('Content-Type', 'application/json; charset=utf-8');
+    res.setHeader('Content-Type', 'text/html; charset=utf-8');
     res.end('Привіт світ!');
   } else if ('/count.html' === urlParsed.pathname) {
     res.end(count + '');
