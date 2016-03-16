@@ -5,15 +5,15 @@ const maxAge = 123;
 
 module.exports = (age) => {
 
-  if (!age) {
+  if (typeof age == 'string') {
+    return 'Age can\'t be string';
+  } else if (!age) {
     return null;
-  }
-
-  if (age < minAge) {
+  } else if (age < minAge) {
     return `Age can't be less than ${minAge}`;
   } else if (age > maxAge) {
     return `Age can't be greater than ${maxAge}`;
-  } else if (Math.round(age) != age) {
+  } else if (Math.round(age) !== age) {
     return `Age can't be double`;
   }
 
