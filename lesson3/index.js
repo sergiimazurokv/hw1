@@ -18,7 +18,7 @@ function requestHandler(request, response) {
                 response.write(JSON.stringify({
                     "message": err.message,
                     "status": "Internal Server Error"
-                }));
+                }, null, 2));
                 response.end();
             } else {
                 response.end();
@@ -28,7 +28,7 @@ function requestHandler(request, response) {
         response.statusCode = 404;
         response.end(JSON.stringify({
             message: "Not Found"
-        }));
+        }, null, 2));
     }
 }
 
