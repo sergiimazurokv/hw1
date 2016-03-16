@@ -9,7 +9,7 @@ module.exports = (age) => {
     return `Age can't be less than ${minAge}`;
   } else if (age > maxAge) {
     return `Age can't be greater than ${maxAge}`;
-  } else if (~~age !== age) {
+  } else if (Math.round(age) !== age) {
     return `Age can't be double`;
   }
 
