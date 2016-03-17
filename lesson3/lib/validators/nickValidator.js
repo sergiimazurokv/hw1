@@ -1,6 +1,6 @@
 'use strict';
 
-const pattern = /[a-z0-9]+$/;
+const pattern = /^[a-z0-9]+$/;
 
 module.exports = (nick) => {
 
